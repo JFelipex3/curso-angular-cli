@@ -71,3 +71,21 @@
 		<li *ngSwitchCase = "'blue'" [ngStyle]="{'background':color, 'color':'white', 'padding': '20px'}">Es de color Blue</li>
 	</ul>
 </div>
+
+<hr/>
+
+<h3>Selector de Colores</h3>
+<button (click) = "logColorSeleccionado()">Mostrar Log</button>
+<input type="text" [(ngModel)] = "colorSeleccionado"/>
+<pre
+	[style.border] = "colorSeleccionado == 'red' ? '5px solid black' : '1px solid green'"
+	[ngClass] = "{
+		fondoAzul: colorSeleccionado == 'blue',
+		fondoVerde: colorSeleccionado == 'green'
+	}"
+>
+	<strong>Color Elegido:</strong>
+	{{colorSeleccionado}}
+</pre>
+<div [ngStyle]="{'background':colorSeleccionado, 'width': '200px', 'height': '200px', 'float': 'right', 'margin-right': '69%'}"></div>
+<div style="clear:both"></div>

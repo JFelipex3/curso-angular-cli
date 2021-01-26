@@ -13,6 +13,7 @@ export class EmpleadoComponent{
 	public trabajadores:Array<Empleado>;
 	public trabajador_externo:boolean;
 	public color:string;
+	public colorSeleccionado:string;
 
 	constructor(){
 		this.empleado = new Empleado('David Lopéz', 45, 'Cocinero', false);
@@ -24,6 +25,7 @@ export class EmpleadoComponent{
 
 		this.trabajador_externo = false;
 		this.color = 'red';
+		this.colorSeleccionado = '#ccc';
 	}
 
 	ngOnInit(){
@@ -37,5 +39,9 @@ export class EmpleadoComponent{
 
 	cambiarColor(valor){
 		this.color = valor;
+	}
+
+	logColorSeleccionado(){
+		console.log(this.colorSeleccionado);
 	}
 }
