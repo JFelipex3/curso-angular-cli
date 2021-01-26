@@ -1,2 +1,14 @@
+<h3>{{title}}</h3>
+<hr>
+
+<nav>
+    <a [routerLink] = "['/pagina-principal']" [routerLinkActive] = "['activado']">Home</a> &nbsp;
+    <a [routerLink] = "['/fruta']" [routerLinkActive] = "['activado']">Fruta</a> &nbsp;
+    <a [routerLink] = "['/empleado']" [routerLinkActive] = "['activado']">Empleado</a> &nbsp;
+    <a [routerLink] = "['/contacto']" [routerLinkActive] = "['activado']">Contacto</a>
+</nav>
+
+<hr>
 <!--<fruta-tag></fruta-tag>-->
-<empleado-tag></empleado-tag>
+<!--<empleado-tag></empleado-tag>-->
+<router-outlet></router-outlet>
