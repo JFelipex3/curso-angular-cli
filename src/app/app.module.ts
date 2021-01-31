@@ -6,9 +6,11 @@ import { routing, appRoutingPrividers } from './app.routing';
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { FrutaComponent } from './fruta/fruta.component';
-import { EmpleadoComponent } from './empleado/empleado.component'
+import { EmpleadoComponent } from './empleado/empleado.component';
 import { HomeComponent } from './home/home.component';
-import { ContactoComponent } from './contacto/contacto.component'
+import { ContactoComponent } from './contacto/contacto.component';
+
+import { ConversorPipe } from './pipes/conversor.pipe';
 
 @NgModule({
   declarations: [
@@ -16,7 +18,8 @@ import { ContactoComponent } from './contacto/contacto.component'
     FrutaComponent,
     EmpleadoComponent,
     HomeComponent,
-    ContactoComponent
+    ContactoComponent,
+    ConversorPipe
   ],
   imports: [
     BrowserModule,
