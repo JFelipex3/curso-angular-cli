@@ -8,11 +8,13 @@
 <input type="text" [(ngModel)] = "prenda_a_guardar">
 <button (click) = "guardarPrenda()">Añadir Prenda</button>
 <p *ngIf = "prenda_a_guardar">La prenda a guardar es: <strong>{{prenda_a_guardar}}</strong></p>
-<h3>Listado de Prendas de Ropa</h3>
-<ul>
-    <li *ngFor = "let prenda of listado_ropa; let i = index">
-        {{prenda}}
-        &nbsp;
-        <button (click) = "eliminarPrenda(i)">Eliminar</button>
-    </li>
-</ul>
+<div>
+    <h3>Listado de Prendas de Ropa</h3>
+    <ul>
+        <li *ngFor = "let prenda of listado_ropa; let i = index">
+            {{prenda}}
+            &nbsp;
+            <button (click) = "eliminarPrenda(i)">Eliminar</button>
+        </li>
+    </ul>
+</div>
